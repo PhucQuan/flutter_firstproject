@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'login_screen.dart';
+import 'login_screen_new.dart';
 
 class TeamIntroScreen extends StatefulWidget {
   const TeamIntroScreen({super.key});
@@ -34,7 +34,7 @@ class _TeamIntroScreenState extends State<TeamIntroScreen> {
 
   void _navigateToLogin() {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      MaterialPageRoute(builder: (context) => const LoginScreenNew()),
     );
   }
 
