@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
 import 'login_screen_new.dart';
+import 'manager/manager_dashboard_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -67,6 +68,34 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
+                
+                // Manager Access Button
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ManagerDashboardScreen(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.admin_panel_settings),
+                  label: const Text('Truy cập Manager Dashboard'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 16,
+                    ),
+                    textStyle: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 32),
+                
                 Card(
                   elevation: 4,
                   shape: RoundedRectangleBorder(
@@ -89,6 +118,12 @@ class HomeScreen extends StatelessWidget {
                         _buildFeatureItem('✓ Quên mật khẩu với OTP'),
                         _buildFeatureItem('✓ Xác thực OTP'),
                         _buildFeatureItem('✓ Đặt lại mật khẩu'),
+                        _buildFeatureItem('✓ Manager Dashboard'),
+                        _buildFeatureItem('✓ Quản lý sản phẩm'),
+                        _buildFeatureItem('✓ Quản lý đơn hàng'),
+                        _buildFeatureItem('✓ Quản lý khuyến mãi'),
+                        _buildFeatureItem('✓ Quản lý doanh thu'),
+                        _buildFeatureItem('✓ Quản lý người dùng'),
                       ],
                     ),
                   ),

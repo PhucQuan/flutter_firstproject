@@ -10,6 +10,14 @@ class ApiConfig {
   static const String resetPassword = '$baseUrl/auth/reset-password';
   static const String resendOtp = '$baseUrl/auth/resend-otp';
   
+  // Manager endpoints
+  static const String dashboard = '$baseUrl/manager/dashboard';
+  static const String products = '$baseUrl/manager/products';
+  static const String orders = '$baseUrl/manager/orders';
+  static const String promotions = '$baseUrl/manager/promotions';
+  static const String revenue = '$baseUrl/manager/revenue';
+  static const String users = '$baseUrl/manager/users';
+  
   // Headers
   static Map<String, String> get headers => {
     'Content-Type': 'application/json',
